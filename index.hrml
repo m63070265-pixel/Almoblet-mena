@@ -34,6 +34,7 @@
       "url": "https://almoblet-mena.com",
       "telephone": "+966579017426",
       "email": "info@almoblet-mena.com",
+      "openingHours": "Mo-Su 00:00-23:59",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "الرياض",
@@ -64,7 +65,7 @@
             align-items: center; justify-content: center;
         }
 
-        /* --- الهيدر نصف دائري مع لمسة سيراميك --- */
+        /* --- الهيدر --- */
         header { 
             position: fixed;
             top: 0;
@@ -194,6 +195,9 @@
         body.dark-mode #gallery div.border-gray-300 { border-color: #444 !important; background-color: #252525; }
         body.dark-mode #loader { background-color: #121212 !important; }
         body.dark-mode .designer-tag { color: #fff; background: #222; border-color: #88651a; }
+        
+        /* توافق زر "مفتوح الآن" مع الوضع الليلي */
+        body.dark-mode .bg-green-50 { background-color: rgba(16, 185, 129, 0.1) !important; border-color: rgba(16, 185, 129, 0.2) !important; color: #34d399 !important; }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -337,9 +341,20 @@
                 <div class="mb-5">
                     <p class="text-lg font-bold text-gray-800" dir="ltr"><i class="fas fa-mobile-alt mx-2 text-[#a8806a]"></i> 0579017426</p>
                     <p class="text-gray-500 text-sm mt-2"><i class="fas fa-envelope mx-2 text-[#a8806a]"></i> info@almoblet-mena.com</p>
+                    
+                    <div class="mt-4 flex items-center justify-center rtl:md:justify-start ltr:md:justify-start gap-3">
+                        <p class="text-gray-700 font-bold text-sm"><i class="far fa-clock mx-1 text-[#a8806a]"></i> <span data-i18n="working_hours">ساعات العمل:</span></p>
+                        <div class="flex items-center gap-2 bg-green-50 border border-green-200 text-green-700 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm">
+                            <span class="relative flex h-2.5 w-2.5">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
+                            </span>
+                            <span data-i18n="open_24">مفتوح الآن - ٢٤ ساعة</span>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="mt-4">
+                <div class="mt-2">
                     <h3 class="font-bold text-gray-800 mb-3" data-i18n="service_areas_title">مناطق الخدمة في الرياض:</h3>
                     <div class="flex flex-wrap gap-2 justify-center rtl:md:justify-start ltr:md:justify-start">
                         <span class="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold">حي العارض</span>
@@ -412,6 +427,8 @@
                 why_1: "دقة وإتقان العمل في أدق التفاصيل", why_2: "الالتزام التام بالمواعيد المتفق عليها", why_3: "أسعار تنافسية تناسب كافة الميزانيات", why_4: "ضمان حقيقي وشامل ما بعد التنفيذ",
                 gallery_title: "معرض أعمالنا", gallery_desc: "المساحة مخصصة لرفع صور أعمالك المميزة قريباً...",
                 contact_title: "تواصل معنا",
+                working_hours: "ساعات العمل:",
+                open_24: "مفتوح الآن - ٢٤ ساعة",
                 service_areas_title: "مناطق الخدمة في الرياض:",
                 footer: "كافة الحقوق محفوظة لدى/ المبلط مينا ٢٠٢٧ ©",
                 b_nav_home: "الرئيسية", b_nav_services: "خدماتنا", b_nav_gallery: "أعمالنا", b_nav_why: "لماذا نحن", b_nav_contact: "تواصل"
@@ -438,6 +455,8 @@
                 why_1: "Precision and perfection in every detail", why_2: "Strict adherence to agreed deadlines", why_3: "Competitive prices for all budgets", why_4: "Comprehensive guarantee after execution",
                 gallery_title: "Our Gallery", gallery_desc: "Space reserved to upload your premium work photos soon...",
                 contact_title: "Contact Us",
+                working_hours: "Working Hours:",
+                open_24: "Open Now - 24 Hours",
                 service_areas_title: "Service Areas in Riyadh:",
                 footer: "All rights reserved / Almoblet Mina 2027 ©",
                 b_nav_home: "Home", b_nav_services: "Services", b_nav_gallery: "Gallery", b_nav_why: "Why Us", b_nav_contact: "Contact"
