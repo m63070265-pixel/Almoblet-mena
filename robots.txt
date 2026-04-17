@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# رابط الخريطة لتسهيل وصول المحركات إليها
+Sitemap: https://almoblet-mena.com/sitemap.xml
